@@ -1,0 +1,46 @@
+body{
+    margin:30px;
+    background-image: url("https://www.unbox.id/wp-content/uploads/2019/05/samsung-logo-wallpaper-28342-29063-hd-wallpapers-1024x576.jpg") ;
+    background-size: cover;
+    background-position: bottom center;
+    height: 700px;
+    width: 100%;
+    -webkit-filter:brightness(80%); 
+
+}
+.logo, .navigasi, .isi, .footer {
+    margin-bottom: 5px;
+    padding: 15px 0;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    background:#99D9EA;
+    text-align: center;
+    }
+.navigasi{
+    width: 100%;
+    height: auto;
+    background:#99D9EA;
+    text-align: left;
+    }
+ul{
+    list-style:none;
+}
+.isi{
+    width: 100%;
+    background: #EFE4B0;
+}
+h2{
+    text-align: center;
+}
+li {
+    display: inline;
+    padding: 30px;
+}
+
+.footer {
+    width: 100%;
+    background: #C3C3C3;
+    text-align: center;
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>order</title>
+</head>
+<body style="background: cadetbluex;">
+    <style>
+        .beli{
+            width: 350px;
+	        background: white;
+	        margin: 80px auto;
+	        padding: 30px 20px;
+            }
+        .kotak{
+	        box-sizing : border-box;
+	        width: 100%;
+	        padding: 10px;
+	        font-size: 11pt;
+            margin-bottom: 20px;
+            }
+        .kotak1{
+	        box-sizing : border-box;
+            width: 100%;
+	        padding: 10px;
+	        font-size: 11pt;
+            margin-bottom: 20px;
+            }
+        .submit{
+	        background: #46de4b;
+	        color: white;
+	        font-size: 11pt;
+	        width: 100%;
+	        border: none;
+	        border-radius: 3px;
+	        padding: 10px 20px;
+            }
+        h1{
+            text-align: center;
+        }  
+    </style>
+	<h1>Silahkan lakukan pemesanan</h1>
+ 
+	<div class=beli>
+		<form action="sukses.html">
+			<label>Nama Lengkap</label>
+			<input type="text" name="Nama" class="kotak" placeholder="Nama "><br>
+ 
+			<label>Email</label>
+            <input type="text" name="email" class="kotak" placeholder="Email "><br>
+            
+            <label>Nomor HP</label>
+            <input type="text" name="hp" class="kotak" placeholder="nomor hp " required><br>
+
+            <label>Alamat</label>
+            <textarea type="text" row="10" class="kotak1" placeholder="alamat Lengkap"></textarea>
+
+            <input type="submit" class="submit" placeholder="Order">
+        </form>
+	</div>
+</body>
+</html>
