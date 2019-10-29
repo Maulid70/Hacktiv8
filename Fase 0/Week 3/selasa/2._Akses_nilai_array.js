@@ -1,0 +1,1 @@
+/home/maulid/h8-p0-w3/selasa/2._Akses_nilai_array.js
