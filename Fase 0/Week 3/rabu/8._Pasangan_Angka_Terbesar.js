@@ -15,7 +15,7 @@ function pasanganTerbesar(num) {
     return temp;
 }
 
-  // TEST CASES
+//   TEST CASES
   console.log(pasanganTerbesar(641573)); // 73
   console.log(pasanganTerbesar(12783456)); // 83
   console.log(pasanganTerbesar(910233)); // 91
