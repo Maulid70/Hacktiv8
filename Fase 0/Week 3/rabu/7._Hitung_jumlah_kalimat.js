@@ -3,7 +3,7 @@ function hitungJumlahKata(kalimat) {
     let spt = kalimat.split(' ')
     return spt.length
   }
-  
+
   // TEST CASES
   console.log(hitungJumlahKata('I have a dream')); // 4
   console.log(hitungJumlahKata('Never eat shredded wheat or cake')); // 6
