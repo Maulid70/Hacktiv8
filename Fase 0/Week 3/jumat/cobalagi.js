@@ -1,13 +1,12 @@
-function danWorld(kalimat){
-    var hasil = ''
+function danWorld(kalimat) {
+  var hasil = "";
   for (let i = 0; i < kalimat.length; i++) {
-      if (kalimat[i] === ' ') {
-          hasil += ' dan '
-      } else{
-          hasil += kalimat[i]
-      }
-      
-  }
-  return hasil
+    if (kalimat[i] === " ") {
+      hasil += " dan ";
+    } else {
+      hasil += kalimat[i];
     }
-    console.log(danWorld('Matilah dalam keadaan dan kondisi terbaik'));
+  }
+  return hasil;
+}
+console.log(danWorld("Matilah dalam keadaan dan kondisi terbaik"));

@@ -4,10 +4,10 @@ function targetTerdekat(arr) {
   var x = [] 
 
   for(i = 0; i < arr.length; i++){
-    if(arr[i] === o){
+    if(arr[i] === 'o'){
       o = i
     }
-    else if(arr[i] === x){
+    else if(arr[i] === 'x'){
       x.push(i)
     }
   }
