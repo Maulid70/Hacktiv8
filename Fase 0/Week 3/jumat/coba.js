@@ -1,24 +1,19 @@
 function mengelompokkanAngka(arr) {
     // you can only write your code here!
-    var t1 = []
-    var t2 = []
-    var t3 = []
-    var tf = []
-    // console.log(beda);
-
-    for(i = 0; i <= arr.length; i++){
-        if(arr[i]%2 === 0 && arr[i]%3 !==0){
-            t1.push(arr[i])
-        }
-        else if(arr[i]%2 === 1 && arr[i]%3 !==0){
-            t2.push(arr[i])
-        }
-        else if(arr[i]%3 === 0){
-            t3.push(arr[i])
-        }
+var tmp = [[], [], []]
+for(i = 0; i <= arr.length; i++){
+    if(arr[i]%3 === 0){
+        tmp[2].push(arr[i])
     }
-    tf.push(t1,t2,t3)
-    return tf
+    else if(arr[i]%2 === 0 ){
+        tmp[0].push(arr[i])
+    }
+    else if(arr[i]%2 === 1 ){
+        tmp[1].push(arr[i])
+    }
+    
+}
+return tmp
 }
 
 // TEST CASES
