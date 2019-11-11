@@ -8,7 +8,7 @@ function andWord(kalimat){
       fully += kalimat[i]
     }
   }
-  return fullys
+  return fully
 }
 
 console.log(andWord('Mari kita budayakan prilaku peduli dengan sesama'));
