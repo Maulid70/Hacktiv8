@@ -11,18 +11,20 @@ function tukarBesarKecil(kalimat) {
             if (kalimat[i] === abjadB[j]) {
                 tmp += abjadK[j]
                 found = true
+                break
             }
             
             // cek jika ketemu huruf kecil, tmp concat dengan huruf besar
             if (kalimat[i] === abjadK[j]) {
                 tmp += abjadB[j]
                 found = true
+                break
             }
 
             // jika KETEMU 1 huruf, langsung break aja, ga perlu lanjut ke huruf selanjutnya
-            if (found === true) {
-                break
-            }
+            // if (found === true) {
+            //     break
+            // }
         }
 
         // jika TIDAK KETEMU 1 huruf, langsung concat aja apapun itu huruf nya 

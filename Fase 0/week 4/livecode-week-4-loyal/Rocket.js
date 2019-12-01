@@ -19,45 +19,49 @@
  */
 
 function isiKotak(num) {
-  console.log('')
+  // console.log('')
   // Write your code here
   // var arr = []
+  if(typeof num !== 'number'){
+    return 'Invalid'
+  }
   var tmp = []
   var counter = 1
   var naik = true
   for (i = 0; i < num; i++) {
     tmp.push([])
-    for (j = 1; j <= num; j++) {
+    for (j = 0; j < num; j++) {
+      if(naik === true) {
+        tmp[i].push(counter%10)
+        counter++
+      }
+      else{
+        tmp[i].push(counter%10)
+        counter--
+      }
       if(counter + 1 > num){
         naik = false
       }
       else if (counter - 1 < 1) {
         naik = true
       }
-      if(naik) {
-        tmp[i].push(counter)
-        counter++
-      }
-      else{
-        tmp[i].push(counter)
-        counter--
-      }
     }
   }
-  console.log(tmp);
+  // console.log(tmp);
+return tmp  
 }
 
 
-// console.log(isiKotak(1))
+console.log(isiKotak(1))
 // // [ [ 1 ] ]
-// console.log(isiKotak(2))
+console.log(isiKotak(2))
 // // [ [ 1, 2 ],
 // //   [ 1, 2 ] ]
-// console.log(isiKotak(3))
+console.log(isiKotak(3))
 // // [ [ 1, 2, 3 ],
 // //   [ 2, 1, 2 ],
 // //   [ 3, 2, 1 ] ]
-// console.log(isiKotak(4))
+console.log(isiKotak(4))
 // // [ [ 1, 2, 3, 4 ],
 // //   [ 3, 2, 1, 2 ],
 // //   [ 3, 4, 3, 2 ],
@@ -68,11 +72,11 @@ console.log(isiKotak(5))
 // //   [ 3, 4, 5, 4, 3 ],
 // //   [ 2, 1, 2, 3, 4 ],
 // //   [ 5, 4, 3, 2, 1 ] ]
-// console.log(isiKotak('5'))
+console.log(isiKotak('5'))
 // // Invalid
-// console.log(isiKotak(false))
+console.log(isiKotak(false))
 // // Invalid
-// console.log(isiKotak(10))
+console.log(isiKotak(10))
 // // [ [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ],
 // //   [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 2 ],
 // //   [ 3, 4, 5, 6, 7, 8, 9, 0, 9, 8 ],
@@ -83,7 +87,7 @@ console.log(isiKotak(5))
 // //   [ 3, 2, 1, 2, 3, 4, 5, 6, 7, 8 ],
 // //   [ 9, 0, 9, 8, 7, 6, 5, 4, 3, 2 ],
 // //   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ] ]
-// console.log(isiKotak(11))
+console.log(isiKotak(11))
 // // [ [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1 ],
 // //   [ 0, 9, 8, 7, 6, 5, 4, 3, 2, 1, 2 ],
 // //   [ 3, 4, 5, 6, 7, 8, 9, 0, 1, 0, 9 ],
@@ -95,7 +99,7 @@ console.log(isiKotak(5))
 // //   [ 9, 0, 1, 0, 9, 8, 7, 6, 5, 4, 3 ],
 // //   [ 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ],
 // //   [ 1, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 ] ]
-// console.log(isiKotak(15))
+console.log(isiKotak(15))
 // // [ [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 ],
 // //   [ 4, 3, 2, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1, 2 ],
 // //   [ 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 4, 3 ],

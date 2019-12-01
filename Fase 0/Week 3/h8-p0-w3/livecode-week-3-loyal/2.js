@@ -30,11 +30,33 @@
  * - Barang yang dibeli hanya wafer, bayam, atau indomie
  */
 
-var belanja = 'indomie'
+var belanja = 'bayam'
 var uang = 103000
 // Output yang diinginkan => Kamu membeli 51 indomie dan memiliki kembalian sebanyak 1000
 // Write your code here
-var jumlahIndomie = Math.floor(uang/2000);
-var uangBelanja = jumlahIndomie * 2000;
-var kembalian = uang - uangBelanja;
-console.log(`Kamu membeli ${jumlahIndomie} dan memiliki kembalian ${kembalian} `);
+
+// harga barang
+var wafer = 15000
+var bayam = 5000
+var indomie = 2000
+
+var jumlahBarang = 0
+var sisa = 0
+switch (belanja) {
+    case 'wafer':
+        jumlahBarang = Math.trunc(uang/wafer)
+        sisa = uang%wafer
+        break;
+    case 'bayam':
+        jumlahBarang = Math.trunc(uang/bayam)
+        sisa = uang%bayam
+        break;
+    case 'indomie':
+        jumlahBarang = Math.trunc(uang/indomie)
+        sisa = uang%indomie
+        break;
+    default:
+        break;
+}
+
+console.log(`Kamu membeli ${jumlahBarang} ${belanja} dan memiliki kembalian sebanyak ${sisa}`);

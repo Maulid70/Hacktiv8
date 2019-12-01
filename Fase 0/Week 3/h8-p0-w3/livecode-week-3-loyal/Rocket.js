@@ -15,21 +15,24 @@
 
 function checkerBoard(num) {
   // Write your code here
-  let result = "";
-  for (let i = 0; i < num; i++) {
-    let tampung = ''
-    for (let j = 0; j < num; j++) {
-      if ((i % 2 === 0 && j % 2 === 0) || (i % 2 === 1 && j % 2 === 1)) {
-         tampung += "*";
-      } else {
-        tampung += " ";
+  if(num < 1 || typeof num !== 'number'){
+    return 'Invalid'
+  }else{
+    var papan = ''
+    for(i = 0; i < num; i++){
+      var baris = ''
+      for(j = 0; j < num; j++){
+        if((i%2 == 1 && j%2 == 1) || (i%2 == 0 && j%2 == 0)){
+          baris += '*'
+        }else{
+          baris += ' '
+        }
       }
-      // tampung += "*";
+      papan += baris + '\n'
     }
-    result += (tampung + '\n');
   }
-  return result;
-}
+  return papan
+  }
 
 console.log(checkerBoard(1));
 // *

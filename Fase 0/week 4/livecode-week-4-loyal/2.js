@@ -32,40 +32,36 @@
 
 function favouritePlaylist(arr) {
   // Write your code here
-  var t1 = 0
-  var t2 = 0
-  var t3 = 0
-  var hasil = []
-  for(i = 0; i < arr.length; i++){
-    if( arr[i] === "jujur"){
-      t1 += 1
-      // console.log(t1);
-    }else if(arr[i] === "bersama bintang"){
-      t2 += 1
-      // console.log(t2);
-    }else if(arr[i] === "puspa"){
-      t3 += 1
-      // console.log(t3);
-    }
-    hasil.push(t1,t2,t3)
-    // console.log(t1, t2, t3);
-  }
-  var banyak = 0
-    for(i = 0; i < hasil.length; i++){
-    if(banyak < hasil[i] || banyak === 0){
-      banyak = hasil[i]
-    }
-  }
-  if (banyak === t1){
-    return `lagu jujur diputar sebanyak ${t1}` 
-    }else if( banyak === t2){
-      return `lagu bersama bintang diputar sebanyak ${t2}`
-    }else if (banyak === t3){
-      return `lagu puspa diputar sebanyak ${t3}`
-    }else {
-      return "tidak ada lagu yang diputar"
-    }
 
+  var hasil = [0,0,0]
+
+  if(Array.isArray(arr) === false){
+    return " Ini bukan sebuah playlist"
+  } else if (arr.length === 0 ){
+    return " Tidak ada lagu yang di putar"
+  } else{
+    for( i = 0; i < arr.length; i++){
+      if(arr[i] === 'jujur'){
+        hasil[0] += 1
+      }
+      if(arr[i] === 'bersama bintang'){
+        hasil[1] += 1
+      }
+      if(arr[i] === 'puspa'){
+        hasil[2] += 1
+      }
+    
+    }
+    if( hasil[0] > hasil[1] && hasil[0] > hasil[2]){
+      return `lagu jujur diputar sebanyak ${hasil[0]} kali`
+    }
+    else if( hasil[1] > hasil[0] && hasil[1] > hasil[2]){
+      return `lagu bersama bintang diputar sebanyak ${hasil[1]} kali`
+    }
+    else{
+      return `lagu puspa diputar sebanyak ${hasil[2]} kali`
+    }
+  }
   }
 console.log(favouritePlaylist(["jujur", "puspa", "bersama bintang", "jujur", "jujur"])) 
 //output: "lagu jujur diputar sebanyak 3 kali"

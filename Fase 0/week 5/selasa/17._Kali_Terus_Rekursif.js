@@ -1,0 +1,20 @@
+function kaliTerusRekursif(angka) {
+    // you can only write your code here!
+    angka = '' + angka
+    if(angka.length <= 1){
+      return angka
+    }
+    let tmp = 1
+    for(i = 0; i < angka.length; i++){
+      tmp *= +angka[i]
+    }
+    return kaliTerusRekursif(tmp)
+    
+  }
+  
+  // TEST CASES
+  console.log(kaliTerusRekursif(66)); // 8
+  console.log(kaliTerusRekursif(3)); // 3
+  console.log(kaliTerusRekursif(24)); // 8
+  console.log(kaliTerusRekursif(654)); // 0
+  console.log(kaliTerusRekursif(1231)); // 6
